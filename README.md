@@ -9,7 +9,6 @@
   <img src="https://img.shields.io/github/languages/top/GracieZh/TechNova2021-Valerie?style=for-the-badge" alt="License" height="25">
   <img src="https://img.shields.io/github/repo-size/GracieZh/TechNova2021-Valerie?style=for-the-badge" alt="GitHub repo size" height="25">
   <img src="https://img.shields.io/github/last-commit/GracieZh/TechNova2021-Valerie?style=for-the-badge" alt="GitHub last commit" height="25">
-  <img src="https://img.shields.io/github/license/GracieZh/TechNova2021-Valerie?style=for-the-badge" alt="License" height="25">
   <br />
 
   <h3 align="center">Valerie</h3>
@@ -43,7 +42,7 @@ expo start
 ## Questions?
 Feel free to message me at gracie#1538 on Discord
 
-## License
+## Licenses
 Expo [MIT License](https://choosealicense.com/licenses/mit/)
 
 GoogleCloudPlatform/getting-started-python [Apache License 2.0](http://www.apache.org/licenses/)
