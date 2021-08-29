@@ -13,7 +13,7 @@ export default function testFetch() {
         };
         // const response = await fetch('https://reqres.in/api/posts', requestOptions);
         console.log("post data");
-        const response = await fetch('https://8080-0960aa54-5a4c-4960-849a-4d2d900d0f43.cs-us-east1-pkhd.cloudshell.dev/text', requestOptions);
+        const response = await fetch('https://trypython2.nn.r.appspot.com/text', requestOptions);
         console.log("response =", response);
         const data = await response.text();
         //const data = await response.json();

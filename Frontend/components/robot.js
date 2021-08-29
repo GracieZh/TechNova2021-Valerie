@@ -11,7 +11,7 @@ import { render } from 'react-dom';
 export default function Dashboard(props) {
   return (
     <View style={styles.container}>
-        <Image style={styles.image} source={require('../assets/bot/normal.png')} />
+        <Image style={styles.image} source={require('../assets/bot/normal-gif.gif')} />
     </View>
   )
 }
@@ -26,7 +26,7 @@ const styles = StyleSheet.create({
   },
   image: {
     width: '100%',
-    height: 150,
+    height: 80,
     resizeMode: 'contain',
   },
 });

@@ -15,11 +15,11 @@ import AudioPlayer from '../components/audioPlayer';
 export default function Dashboard(props) {
   return (
     <View style={styles.container}>
-      
+      {/* 
       <TouchableOpacity onPress={props.onPress} style={styles.button}>
         <Text style={styles.buttonText}>Test</Text>
       </TouchableOpacity>
-      
+      */}
       <Bot />
       <Messages />
       <BotNav />

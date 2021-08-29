@@ -29,7 +29,7 @@ export default function App() {
   async function uploadAudioAsync(uri) {
     console.log("Uploading " + uri);
     //let apiUrl = 'http://192.168.1.216:8888/upload.php';
-    let apiUrl = 'https://8080-0960aa54-5a4c-4960-849a-4d2d900d0f43.cs-us-east1-pkhd.cloudshell.dev/upload';
+    let apiUrl = 'https://trypython2.nn.r.appspot.com/upload';
     
     let uriParts = uri.split('.');
     let fileType = uriParts[uriParts.length - 1];
