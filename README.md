@@ -6,10 +6,10 @@
   <br />
 
   <!-- Badges -->
-  <img src="https://img.shields.io/github/languages/top/GracieZh/psychopathology-fer-assistant?style=for-the-badge" alt="License" height="25">
-  <img src="https://img.shields.io/github/repo-size/GracieZh/psychopathology-fer-assistant?style=for-the-badge" alt="GitHub repo size" height="25">
-  <img src="https://img.shields.io/github/last-commit/GracieZh/psychopathology-fer-assistant?style=for-the-badge" alt="GitHub last commit" height="25">
-  <img src="https://img.shields.io/github/license/GracieZh/psychopathology-fer-assistant?style=for-the-badge" alt="License" height="25">
+  <img src="https://img.shields.io/github/languages/top/GracieZh/TechNova2021-Valerie?style=for-the-badge" alt="License" height="25">
+  <img src="https://img.shields.io/github/repo-size/GracieZh/TechNova2021-Valerie?style=for-the-badge" alt="GitHub repo size" height="25">
+  <img src="https://img.shields.io/github/last-commit/GracieZh/TechNova2021-Valerie?style=for-the-badge" alt="GitHub last commit" height="25">
+  <img src="https://img.shields.io/github/license/GracieZh/TechNova2021-Valerie?style=for-the-badge" alt="License" height="25">
   <br />
 
   <h3 align="center">Valerie</h3>
