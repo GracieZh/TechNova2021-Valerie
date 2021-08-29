@@ -2,7 +2,7 @@
 
 Valerie is a web app chatbot that promotes mental wellness. 
 
-## Install dependencies
+## Install dependencies (frontend)
 
 Use the package manager [npm](https://www.npmjs.com/package/npm) to install dependencies.
 
@@ -10,7 +10,7 @@ Use the package manager [npm](https://www.npmjs.com/package/npm) to install depe
 npm install
 ```
 
-## Run (frontend only)
+## Run (frontend)
 
 ```bash
 expo start
@@ -18,3 +18,7 @@ expo start
 
 ## Questions?
 Feel free to message me at gracie#1538 on Discord
+
+## License
+Expo [MIT License](https://choosealicense.com/licenses/mit/)
+GoogleCloudPlatform/getting-started-python [Apache License 2.0](http://www.apache.org/licenses/)
