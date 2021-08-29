@@ -21,4 +21,5 @@ Feel free to message me at gracie#1538 on Discord
 
 ## License
 Expo [MIT License](https://choosealicense.com/licenses/mit/)
+
 GoogleCloudPlatform/getting-started-python [Apache License 2.0](http://www.apache.org/licenses/)
