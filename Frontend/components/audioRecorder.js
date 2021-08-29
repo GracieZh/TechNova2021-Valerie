@@ -4,6 +4,7 @@ import { FontAwesome } from '@expo/vector-icons';
 import { Audio } from 'expo-av';
 
 export default function App() {
+
   const [recording, setRecording] = React.useState();
   const [uri, setUri] = React.useState('');
 
@@ -26,6 +27,28 @@ export default function App() {
     }
   }
 
+  const [sound, setSound] = React.useState();
+
+  async function playAnswer(id)
+  {
+    let url = 'https://trypython2.nn.r.appspot.com/mp3?id='+id
+
+    console.log(" play id ", id, url);
+  
+    console.log('Loading Sound');
+
+    const { sound } = await Audio.Sound.createAsync(
+      { uri: url },
+      { shouldPlay: true }
+    );
+
+    setSound(sound);
+
+    console.log('Playing Sound');
+    await sound.playAsync(); 
+    console.log('Playing Sound Done.');
+  }
+
   async function uploadAudioAsync(uri) {
     console.log("Uploading " + uri);
     //let apiUrl = 'http://192.168.1.216:8888/upload.php';
@@ -35,7 +58,7 @@ export default function App() {
     let fileType = uriParts[uriParts.length - 1];
   
     let formData = new FormData();
-    formData.append('file', {
+    formData.append('image', {
       uri,
       name: `recording.${fileType}`,
       type: `audio/x-${fileType}`,
@@ -52,23 +75,42 @@ export default function App() {
     
     let res = null;
     console.log("POSTing " + uri + " to " + apiUrl);
-    await fetch(apiUrl, options) 
-    .then ( response => {
-      console.log("RESPONSE: ", JSON.stringify(response));
-      res = response;
-    })
-    .catch (err => {
+    try {
+      let response = await fetch(apiUrl, options) 
+      console.log("** RESPONSE ** : ", JSON.stringify(response));
+      const data = await response.json();
+
+      let id = '0';
+      console.log(".....................", id);
+
+      console.log("--data--: ", data);
+
+      id = data.id;
+      console.log("id: ", id);
+
+      playAnswer(id);
+    }
+    catch(err)
+    {
       console.log("Err: ", err);
-    })
+    }
     
     //const data = await response.json();
     //console.log("data: ", data);
 
-
-
     return res;
   }
   
+
+      /*
+      .then ( async response => {
+        console.log("RESPONSE: ", JSON.stringify(response));
+        res = response;
+      })
+      .catch (err => {
+        console.log("Err: ", err);
+      })
+      */
 
   async function stopRecording() {
     console.log('Stopping recording..');
