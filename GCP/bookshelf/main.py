@@ -68,11 +68,13 @@ def upload_mp3_file(img, id:str):
     try:
         with io.open(filename, "wb") as out:
             print(" open file done")
-            out.write(img.read())
+            image = img.read();
+            print(" read done")
+            out.write(image);
             print(" write done")
             out.close();
     except IOError as e:
-        print("makedirs err = ", err)
+        print("write file err = ", err)
         raise        
 
     return "return from upload_mp3_file"
@@ -135,12 +137,16 @@ def upload():
 
         print("..... text .....  ", text)
 
+        question = "( I did not hear anything )"
         if text.startswith('Transcript: '):
-            answer = searchforanswer(text[12: len(text)], id)
-            print("=====> question:", text)
-            print("=====> answer:", answer)
-            synthesize_text(answer, id)
-            return jsonify({'ok':'true', 'id':id}), 200, {'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Headers': '*'}
+            text[12: len(text)]
+
+        answer = searchforanswer(question, id)
+        print("=====> question:", question)
+        print("=====> answer:", answer)
+        synthesize_text(answer, id)
+        return jsonify({'ok':'true', 'id':id}), 200, {'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Headers': '*'}
+
 
     return render_template('form.html', action='Add', book={})
 
@@ -167,7 +173,13 @@ def getmp3():
         id = request.args.get('id')
     elif request_json and 'id' in request_json:
         id = request_json['id']
-    return send_file(f"/tmp/upload."+id+".mp3")
+    # return send_file(f"/tmp/upload."+id+".mp3")
+    print("get mp3", f"/tmp/answer."+id+".mp3")
+    return send_file(f"/tmp/answer."+id+".mp3")
+
+@app.route('/welcomesound')
+def welcomesound():
+    return send_file(f"./images/horse.mp3")
 
 @app.route('/test1')
 def test1():

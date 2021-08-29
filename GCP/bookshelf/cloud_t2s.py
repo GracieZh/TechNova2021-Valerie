@@ -18,9 +18,14 @@ def text_to_mp3(voice_name: str, text: str, id:str):
     )
     print("text is:", text)
 
+    # filename = f"./images/answer."+id+".mp3"
+    # with open(filename, "wb") as out1:
+    #     out1.write(response.audio_content)
+
     filename = f"/tmp/answer."+id+".mp3"
     with open(filename, "wb") as out:
         out.write(response.audio_content)
+
     #    print(f'Generated speech saved to "{filename}"')
 
     return send_file(filename)
